@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>목록 보기</title>
+</head>
+<body>
+    <h2>상품 목록 화면</h2>
+    <p><a href="insert">데이터 삽입</a></p>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>상품ID</th>
+                <th>상품이름</th>
+                <th>가격</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for item in data %}
+                <tr>
+                    <td>{{item.itemid}}</td>
+                    <td><a href="/detail/{{item.itemid}}">{{item.itemname}}</td>
+                    <td>{{item.price}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>

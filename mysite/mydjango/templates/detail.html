@@ -1,0 +1,30 @@
+{%load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>상품 상세보기</title>
+</head>
+<body>
+    <h2>상품 상세 보기</h2>
+    <table border="1">
+        <tr>
+            <td>상품 아이디</td>
+            <td>{{item.itemid}}</td>
+        </tr>
+        <tr>
+            <td>상품 이름</td>
+            <td>{{item.itemname}}</td>
+        </tr>
+        <tr>
+            <td>가격</td>
+            <td>{{item.price}}</td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <img  src="{{item.pictureurl" />
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
